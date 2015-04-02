@@ -2,13 +2,13 @@
 
 ### General 
 * **PASS** Stressing GPUs. Source available at [this repository](https://github.com/lichinka/cuda-stress) (contact MK).
-* **PASS** Regression tests were successful (contact TR).
+* **PASS** Regression tests were successful (contact TR). Note: 01.04.2015 MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 15:42.
 
 ### Applications
 * **PASS** _Ramses_ with MPI and OpenACC support, without OpenMP (contact CG).
 * **PASS** _Specfem3D_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/specfem3d/globe`` (contact LM and Nina).
 * **PASS** _Gromacs_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/gromacs`` (contact LM and Nina).
-* **PASS** _CP2K_ MPI+OpenMP+cuda, version 2.6, exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/cp2k/gpu`` (contact LM.)
+* **PASS** _CP2K_ MPI+OpenMP+cuda, version 2.6, exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/cp2k/gpu`` (contact LM.) Note: 01.04.2015 MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 15:42.
 
 ### Ticket-related tests
 * **PASS** [#15166](https://webrt.cscs.ch/Ticket/Display.html?id=15166): nvcc warning no longer appears (contact LB).
