@@ -62,3 +62,7 @@ $> nvcc -ccbin /opt/gcc/4.7.3/bin/g++ -std=c++11 test.cu -Xcompiler ,\"-mavx\"  
 There is no direct dependency between the visualization tools and CUDA. Only through the driver update affects them due to OpenGL support.
 * **PASS** Xorg recompilation with the lastest Nvidia driver was successful (contact GF).
 * **PASS** Testing of visualization tools has been performed and they are working ok (contact GF).
+
+### JG
+* **PASS** 2015/04/09 [matrixMulCUBLAS](https://bitbucket.org/jgphpc/pug/issue/27/matrixmulcublas)
+
