@@ -2,7 +2,9 @@
 
 ### General 
 * **PASS** Stressing GPUs. Source available at [this repository](https://github.com/lichinka/cuda-stress) (contact MK).
-* **PASS** Regression tests (contact TWR). Note: 01.04.2015 MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 15:42. Thi sis now fixed. But... 6001 and 6003 are FAILING. These tests libsci_acc DGEMM.
+* **PASS** Regression tests (contact TWR). 
+* Note: 01.04.2015 MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 15:42. This is now fixed 9 APril 2015. 
+* But... 6001 and 6003 are FAILING. This is a simple test that executes libsci_acc DGEMM.
 
 ### Applications
 * **PASS** _Ramses_ with MPI and OpenACC support, without OpenMP (contact CG).
