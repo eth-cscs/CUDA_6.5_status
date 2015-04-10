@@ -48,7 +48,7 @@ $> nvcc -ccbin /opt/gcc/4.7.3/bin/g++ -std=c++11 test.cu -Xcompiler ,\"-mavx\"  
 
 
 ### COSMO
-* **????** Xavier and Carlos have been given access to Santis in order to compile COSMO with CCE and CUDA 6.5 ( see ticket [#18018](https://webrt.cscs.ch/Ticket/Display.html?id=18018) ).
+* **PASS** (LB 10.4.2015) Xavier successfully compiled and run COSMO tests using CCE and CUDA 6.5 ( see ticket [#18018](https://webrt.cscs.ch/Ticket/Display.html?id=18018) ).
 
 
 ### Profiling
