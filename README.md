@@ -17,7 +17,7 @@
 * **PASS** (GPP 10.04.2015) [#17365](https://webrt.cscs.ch/Ticket/Display.html?id=17365): G2G over MPI with CUDA and OpenCL working ok (contact LB).
 * **PASS** (GPP 10.04.2015) [#17402](https://webrt.cscs.ch/Ticket/Display.html?id=17402): basic profiling by exporting COMPUTE_PROFILE=1 (contact LB).
 * **PASS** (GPP 10.04.2015) [#17591](https://webrt.cscs.ch/Ticket/Display.html?id=17591): DGEMM status error when exporting CRAY_CUDA_MPS=1 no longer occurs (contact LB).
-* **PASS** (GPP 10.04.2015) [#17988](https://webrt.cscs.ch/Ticket/Display.html?id=17988): OpenACC initialization fails on ``libsci_acc_init();`` if using module ``cray-libsci_acc/3.1.1``. However, the related CrayPort bug is marked as solved ( see [#802506](https://crayport.cray.com/_layouts/cray.portal.bugs/BugDetails.aspx?BugId=821506) ) (contact AJ).
+* **PASS** (GPP 10.04.2015) [#17988](https://webrt.cscs.ch/Ticket/Display.html?id=17988): problem solved with if using module ``cray-libsci_acc/3.1.1``. The related CrayPort bug is [#802506](https://crayport.cray.com/_layouts/cray.portal.bugs/BugDetails.aspx?BugId=821506) (contact AJ).
 * Source code available at [this repository](https://github.com/lichinka/L2).
 
 
