@@ -68,3 +68,5 @@ There is no direct dependency between the visualization tools and CUDA. Only thr
 ### JG
 * **PASS** 2015/04/09 [matrixMulCUBLAS](https://bitbucket.org/jgphpc/pug/issue/27/matrixmulcublas)
 
+### AJ
+* **PASS** 2015/04/13 pic_engine compiles and runs | Fortran code with OpenACC and a few kernals in CUDA C
