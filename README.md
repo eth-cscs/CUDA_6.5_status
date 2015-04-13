@@ -22,29 +22,14 @@
 
 
 ### OpenCL (contact LB)
-* **PASS** OpenCL 1.0/1.1 tests working ok.
-* **PASS** G2G over MPI tests working ok.
+* **PASS** (LB 13.4.2015) OpenCL 1.0/1.1 tests working ok.
+* **PASS** (LB 13.4.2015) G2G over MPI tests working ok.
 * Source available at [this repository](https://github.com/lichinka/opencl-training).
 
 
 ### C++11 support
 * **PASS** GridTools compilation fails if using the ``CC`` wrapper to compile CUDA code, which passes the ``-mavx`` to the ``nvcc`` compiler. The workaround for ``g++ 4.8.2`` is to avoid passing the ``-mavx`` option to ``nvcc``. Another workaround is to use ``g++ 4.7.3`` (contact MB).
-* A minimal test case follows:
-```c++
-#include <algorithm>
-
-int main (int argc, char **argv)
-{
-    return EXIT_SUCCESS;
-}
-```
-* Compile on Santis with:
-```
-$> module load cudatoolkit
-$> nvcc -ccbin /opt/gcc/4.8.2/bin/g++ -std=c++11 test.cu                        # Works
-$> nvcc -ccbin /opt/gcc/4.8.2/bin/g++ -std=c++11 test.cu -Xcompiler ,\"-mavx\"  # FAILS
-$> nvcc -ccbin /opt/gcc/4.7.3/bin/g++ -std=c++11 test.cu -Xcompiler ,\"-mavx\"  # Works
-```
+* (LB 13.4.2015) A ticket has been opened to track this issue with Cray (see ticket [#19002](https://webrt.cscs.ch/Ticket/Display.html?id=19002) for full description and test case).
 
 
 ### COSMO
