@@ -51,20 +51,20 @@ $> nvcc -ccbin /opt/gcc/4.7.3/bin/g++ -std=c++11 test.cu -Xcompiler ,\"-mavx\"  
 * **????** Xavier and Carlos have been given access to Santis in order to compile COSMO with CCE and CUDA 6.5 ( see ticket [#18018](https://webrt.cscs.ch/Ticket/Display.html?id=18018) ).
 
 
-### Profiling
-* **????** ``perftools`` on CP2K + CUDA working ok. Setup and instructions are available [here](https://bitbucket.org/jgphpc/pug/issue/24/cp2k), but are not yet reproducible (contact JG).
-* **????** ``scorep``: installation + test still ongoing (contact JG).
-
-
-### Debugging
-* **????** ddt/5.0 is working after Allinea's intervention. Still waiting for a reproducible test case (contact JG).
-
-
 ### Visualization
 There is no direct dependency between the visualization tools and CUDA. Only through the driver update affects them due to OpenGL support.
 * **PASS** Xorg recompilation with the lastest Nvidia driver was successful (contact GF).
 * **PASS** Testing of visualization tools has been performed and they are working ok (contact GF).
 
 ### JG
-* **PASS** 2015/04/09 [matrixMulCUBLAS](https://bitbucket.org/jgphpc/pug/issue/27/matrixmulcublas)
+#### PE
+* **PASS** 2015/04/09 ``cuda/6.5`` [matrixMulCUBLAS](https://bitbucket.org/jgphpc/pug/issue/27/matrixmulcublas)
+
+#### Debugging
+* **PASS** 2015/04/09 ddt/5.0 [matrixMulCUBLAS](https://bitbucket.org/jgphpc/pug/issue/27/matrixmulcublas)
+
+#### Profiling
+* **PASS** ``perftools+cp2k`` [cp2k+cuda+gnu](https://bitbucket.org/jgphpc/pug/issue/24/cp2k). (Issue with hugepage ?)
+* **PASS** ``scorep`` [jacobi+mpi+cuda](https://bitbucket.org/jgphpc/pug/issue/7/jacobi-mpi-cuda)
+* **FAIL** 2015/04/13 ``nvprof``: libcuinj64.so => ticket [#18909/823648](https://webrt.cscs.ch/Ticket/Display.html?id=18909)
 
