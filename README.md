@@ -3,8 +3,8 @@
 ### General 
 * **PASS** Stressing GPUs. Source available at [this repository](https://github.com/lichinka/cuda-stress) (contact MK).
 * **PASS** Regression tests (contact TWR). 
-* Note: 01.04.2015 MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 15:42. This is now fixed 9 APril 2015. 
-* But... 6001 and 6003 are FAILING. This is a simple test that executes libsci_acc DGEMM.
+* Note: MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 1 April, 15:42.  FIXED 9 April 2015.
+* Note: 6001 and 6003 are failing, this is a simple test that executes libsci_acc DGEMM. FIXED 10 April 2015.
 
 ### Applications
 * **PASS** _Ramses_ with MPI and OpenACC support, without OpenMP (contact CG).
@@ -13,11 +13,11 @@
 * **PASS** _CP2K_ MPI+OpenMP+cuda, version 2.6, exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/cp2k/gpu`` (contact LM.) Note: 01.04.2015 MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 15:42.
 
 ### Ticket-related tests
-* **PASS** [#15166](https://webrt.cscs.ch/Ticket/Display.html?id=15166): nvcc warning no longer appears (contact LB).
-* **PASS** [#17365](https://webrt.cscs.ch/Ticket/Display.html?id=17365): G2G over MPI with CUDA and OpenCL working ok (contact LB).
-* **PASS** [#17402](https://webrt.cscs.ch/Ticket/Display.html?id=17402): basic profiling by exporting COMPUTE_PROFILE=1 (contact LB).
-* **PASS** [#17591](https://webrt.cscs.ch/Ticket/Display.html?id=17591): DGEMM status error when exporting CRAY_CUDA_MPS=1 no longer occurs (contact LB).
-* **FAIL** [#17988](https://webrt.cscs.ch/Ticket/Display.html?id=17988): OpenACC initialization fails on ``libsci_acc_init();`` if using module ``cray-libsci_acc/3.1.1``. However, the related CrayPort bug is marked as solved ( see [#802506](https://crayport.cray.com/_layouts/cray.portal.bugs/BugDetails.aspx?BugId=821506) ) (contact AJ).
+* **PASS** (GPP 10.04.2015) [#15166](https://webrt.cscs.ch/Ticket/Display.html?id=15166): nvcc warning no longer appears (contact LB).
+* **PASS** (GPP 10.04.2015) [#17365](https://webrt.cscs.ch/Ticket/Display.html?id=17365): G2G over MPI with CUDA and OpenCL working ok (contact LB).
+* **PASS** (GPP 10.04.2015) [#17402](https://webrt.cscs.ch/Ticket/Display.html?id=17402): basic profiling by exporting COMPUTE_PROFILE=1 (contact LB).
+* **PASS** (GPP 10.04.2015) [#17591](https://webrt.cscs.ch/Ticket/Display.html?id=17591): DGEMM status error when exporting CRAY_CUDA_MPS=1 no longer occurs (contact LB).
+* **PASS** (GPP 10.04.2015) [#17988](https://webrt.cscs.ch/Ticket/Display.html?id=17988): problem solved with if using module ``cray-libsci_acc/3.1.1``. The related CrayPort bug is [#802506](https://crayport.cray.com/_layouts/cray.portal.bugs/BugDetails.aspx?BugId=821506) (contact AJ).
 * Source code available at [this repository](https://github.com/lichinka/L2).
 
 
@@ -48,7 +48,7 @@ $> nvcc -ccbin /opt/gcc/4.7.3/bin/g++ -std=c++11 test.cu -Xcompiler ,\"-mavx\"  
 
 
 ### COSMO
-* **????** Xavier and Carlos have been given access to Santis in order to compile COSMO with CCE and CUDA 6.5 ( see ticket [#18018](https://webrt.cscs.ch/Ticket/Display.html?id=18018) ).
+* **PASS** (LB 10.4.2015) Xavier successfully compiled and run COSMO tests using CCE and CUDA 6.5 ( see ticket [#18018](https://webrt.cscs.ch/Ticket/Display.html?id=18018) ).
 
 
 ### Visualization
@@ -68,3 +68,5 @@ There is no direct dependency between the visualization tools and CUDA. Only thr
 * **PASS** ``scorep`` [jacobi+mpi+cuda](https://bitbucket.org/jgphpc/pug/issue/7/jacobi-mpi-cuda)
 * **FAIL** 2015/04/13 ``nvprof``: libcuinj64.so => ticket [#18909/823648](https://webrt.cscs.ch/Ticket/Display.html?id=18909)
 
+### AJ
+* **PASS** 2015/04/13 pic_engine compiles and runs | Fortran code with OpenACC and a few kernals in CUDA C
