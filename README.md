@@ -1,16 +1,16 @@
 ## Testing CUDA 6.5 prerelease on Santis 
 
 ### General 
-* **PASS** Stressing GPUs. Source available at [this repository](https://github.com/lichinka/cuda-stress) (contact MK).
+* **PASS** (LB 13.4.2015) Stressing GPUs. Source available at [this repository](https://github.com/lichinka/cuda-stress) (contact MK).
 * **PASS** Regression tests (contact TWR). 
 * Note: MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 1 April, 15:42.  FIXED 9 April 2015.
 * Note: 6001 and 6003 are failing, this is a simple test that executes libsci_acc DGEMM. FIXED 10 April 2015.
 
 ### Applications
-* **PASS** _Ramses_ with MPI and OpenACC support, without OpenMP (contact CG).
-* **PASS** _Specfem3D_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/specfem3d/globe`` (contact LM and Nina).
-* **PASS** _Gromacs_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/gromacs`` (contact LM and Nina).
-* **PASS** _CP2K_ MPI+OpenMP+cuda, version 2.6, exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/cp2k/gpu`` (contact LM.) Note: 01.04.2015 MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 15:42.
+* **PASS** (test expected on 16.4.2015) _Ramses_ with MPI and OpenACC support, without OpenMP (contact CG).
+* **PASS** _Specfem3D_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/specfem3d/globe/small_benchmark_run_to_test_very_simple_Earth`` (contact LM and Nina), last test on April 13th successful (jobid=4218).
+* **PASS** _Gromacs_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/gromacs/driver`` (contact LM and Nina), last test on April 13th successful (jobid=4217).
+* **PASS** _CP2K_ MPI+OpenMP+cuda, version 2.6, exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/cp2k/gpu`` (contact LM.) Note: 01.04.2015 MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 15:42. Last test on April 13th successful (jobid=4216).
 
 ### Ticket-related tests
 * **PASS** (GPP 10.04.2015) [#15166](https://webrt.cscs.ch/Ticket/Display.html?id=15166): nvcc warning no longer appears (contact LB).
@@ -22,29 +22,14 @@
 
 
 ### OpenCL (contact LB)
-* **PASS** OpenCL 1.0/1.1 tests working ok.
-* **PASS** G2G over MPI tests working ok.
+* **PASS** (LB 13.4.2015) OpenCL 1.0/1.1 tests working ok.
+* **PASS** (LB 13.4.2015) G2G over MPI tests working ok.
 * Source available at [this repository](https://github.com/lichinka/opencl-training).
 
 
 ### C++11 support
-* **PASS** GridTools compilation fails if using the ``CC`` wrapper to compile CUDA code, which passes the ``-mavx`` to the ``nvcc`` compiler. The workaround for ``g++ 4.8.2`` is to avoid passing the ``-mavx`` option to ``nvcc``. Another workaround is to use ``g++ 4.7.3`` (contact MB).
-* A minimal test case follows:
-```c++
-#include <algorithm>
-
-int main (int argc, char **argv)
-{
-    return EXIT_SUCCESS;
-}
-```
-* Compile on Santis with:
-```
-$> module load cudatoolkit
-$> nvcc -ccbin /opt/gcc/4.8.2/bin/g++ -std=c++11 test.cu                        # Works
-$> nvcc -ccbin /opt/gcc/4.8.2/bin/g++ -std=c++11 test.cu -Xcompiler ,\"-mavx\"  # FAILS
-$> nvcc -ccbin /opt/gcc/4.7.3/bin/g++ -std=c++11 test.cu -Xcompiler ,\"-mavx\"  # Works
-```
+* **PASS** (LB 13.4.2015) GridTools compilation fails if using the ``CC`` wrapper to compile CUDA code, which passes the ``-mavx`` to the ``nvcc`` compiler. The workaround for ``g++ 4.8.2`` is to avoid passing the ``-mavx`` option to ``nvcc``. Another workaround is to use ``g++ 4.7.3`` (contact MB).
+* A ticket has been opened to track this issue with Cray (see ticket [#19002](https://webrt.cscs.ch/Ticket/Display.html?id=19002) for full description and test case).
 
 
 ### COSMO
@@ -53,8 +38,8 @@ $> nvcc -ccbin /opt/gcc/4.7.3/bin/g++ -std=c++11 test.cu -Xcompiler ,\"-mavx\"  
 
 ### Visualization
 There is no direct dependency between the visualization tools and CUDA. Only through the driver update affects them due to OpenGL support.
-* **PASS** Xorg recompilation with the lastest Nvidia driver was successful (contact GF).
-* **PASS** Testing of visualization tools has been performed and they are working ok (contact GF).
+* **PASS** (GF 13.4.2015) Xorg recompilation with the lastest Nvidia driver was successful (contact GF).
+* **PASS** (GF 13.4.2015) No outstanding issues after latest recompilation (contact GF).
 
 ### JG
 #### PE
