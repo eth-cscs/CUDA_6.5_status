@@ -7,7 +7,7 @@
 * Note: 6001 and 6003 are failing, this is a simple test that executes libsci_acc DGEMM. FIXED 10 April 2015.
 
 ### Applications
-* **PASS** (test expected on 16.4.2015) _Ramses_ with MPI and OpenACC support, without OpenMP (contact CG).
+* **PASS** (CG 20.04.2015) _Ramses_ with MPI and OpenACC support, without OpenMP (contact CG).
 * **PASS** _Specfem3D_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/specfem3d/globe/small_benchmark_run_to_test_very_simple_Earth`` (contact LM and Nina), last test on April 13th successful (jobid=4218).
 * **PASS** _Gromacs_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/gromacs/driver`` (contact LM and Nina), last test on April 13th successful (jobid=4217).
 * **PASS** _CP2K_ MPI+OpenMP+cuda, version 2.6, exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/cp2k/gpu`` (contact LM.) Note: 01.04.2015 MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 15:42. Last test on April 13th successful (jobid=4216).
