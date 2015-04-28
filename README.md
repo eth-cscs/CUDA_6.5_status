@@ -11,6 +11,7 @@
 * **PASS** _Specfem3D_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/specfem3d/globe/small_benchmark_run_to_test_very_simple_Earth`` (contact LM and Nina), last test on April 13th successful (jobid=4218).
 * **PASS** _Gromacs_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/gromacs/driver`` (contact LM and Nina), last test on April 13th successful (jobid=4217).
 * **PASS** _CP2K_ MPI+OpenMP+cuda, version 2.6, exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/cp2k/gpu`` (contact LM.) Note: 01.04.2015 MPI over CRAY_CUDA_MPS=1 seems to be broken again, see email from TWR 15:42. Last test on April 13th successful (jobid=4216).
+* **FAIL** _BigDFT_ crashes in dcopy when using OpenCL/cuda65.
 
 ### Ticket-related tests
 * **PASS** (GPP 10.04.2015) [#15166](https://webrt.cscs.ch/Ticket/Display.html?id=15166): nvcc warning no longer appears (contact LB).
