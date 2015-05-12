@@ -21,8 +21,8 @@
 
 
 ### OpenCL (contact LB)
-* **????** (LB 13.4.2015) OpenCL 1.0/1.1 tests working ok.
-* **????** (LB 13.4.2015) G2G over MPI tests working ok.
+* **PASS** (LB 13.4.2015) OpenCL 1.0/1.1 tests working ok.
+* **PASS** (LB 13.4.2015) G2G over MPI tests working ok.
 * Source available at [this repository](https://github.com/lichinka/opencl-training).
 
 
