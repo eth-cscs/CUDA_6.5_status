@@ -27,7 +27,7 @@
 
 
 ### C++11 support
-* **????** (LB 13.4.2015) GridTools compilation fails if using the ``CC`` wrapper to compile CUDA code, which passes the ``-mavx`` to the ``nvcc`` compiler. The workaround for ``g++ 4.8.2`` is to avoid passing the ``-mavx`` option to ``nvcc``. Another workaround is to use ``g++ 4.7.3`` (contact MB).
+* **FAIL** (LB 13.4.2015) GridTools compilation fails if using the ``CC`` wrapper to compile CUDA code, which passes the ``-mavx`` to the ``nvcc`` compiler. The workaround for ``g++ 4.8.2`` is to avoid passing the ``-mavx`` option to ``nvcc``. Another workaround is to use ``g++ 4.7.3`` (contact MB).
 * A ticket has been opened to track this issue with Cray (see ticket [#19002](https://webrt.cscs.ch/Ticket/Display.html?id=19002) for full description and test case).
 
 
