@@ -37,8 +37,8 @@
 
 ### Visualization
 There is no direct dependency between the visualization tools and CUDA. Only through the driver update affects them due to OpenGL support.
-* **????** (GF 13.4.2015) Xorg recompilation with the lastest Nvidia driver was successful (contact GF).
-* **????** (GF 13.4.2015) No outstanding issues after latest recompilation (contact GF).
+* **PASS** (GF 13.4.2015) Xorg recompilation with the lastest Nvidia driver was successful (contact JF).
+* **PASS** (GF 13.4.2015) No outstanding issues after latest recompilation (contact JF).
 
 ### JG
 #### PE
