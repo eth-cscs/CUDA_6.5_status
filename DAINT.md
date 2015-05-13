@@ -1,4 +1,4 @@
-## Testing CUDA 6.5 prerelease on Santis 
+## Testing CUDA 6.5 prerelease on Daint
 
 ### General 
 * **PASS** (LB 13.4.2015) Stressing GPUs. Source available at [this repository](https://github.com/lichinka/cuda-stress) (contact MK).
