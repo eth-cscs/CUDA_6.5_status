@@ -48,9 +48,9 @@ There is no direct dependency between the visualization tools and CUDA. Only thr
 * **PASS** 2015/05/21 ddt/5.0 [matrixMulCUBLAS](https://github.com/eth-cscs/parallel-debuggers/issues/51)
 
 #### Profiling
+* **PASS** ``scorep/141`` [jacobi+mpi+cuda](https://bitbucket.org/jgphpc/pug/issue/7/jacobi-mpi-cuda)
+* **PASS (with WORKAROUND)** 2015/04/15 ``nvprof``: libcuinj64.so => ticket [#18909/823648](https://webrt.cscs.ch/Ticket/Display.html?id=18909)
 * **????** ``perftools+cp2k`` [cp2k+cuda+gnu](https://bitbucket.org/jgphpc/pug/issue/24/cp2k). (Issue with hugepage ?)
-* **????** ``scorep`` [jacobi+mpi+cuda](https://bitbucket.org/jgphpc/pug/issue/7/jacobi-mpi-cuda)
-* **???? with WORKAROUND** 2015/04/15 ``nvprof``: libcuinj64.so => ticket [#18909/823648](https://webrt.cscs.ch/Ticket/Display.html?id=18909)
-
+* 
 ### AJ
 * **????** 2015/04/13 pic_engine compiles and runs | Fortran code with OpenACC and a few kernals in CUDA C
