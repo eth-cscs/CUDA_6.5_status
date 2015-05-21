@@ -45,7 +45,7 @@ There is no direct dependency between the visualization tools and CUDA. Only thr
 * **PASS** 2015/05/21 ``cuda/6.5`` [matrixMulCUBLAS](https://bitbucket.org/jgphpc/pug/issue/27/matrixmulcublas)
 
 #### Debugging
-* **????** 2015/04/09 ddt/5.0 [matrixMulCUBLAS](https://bitbucket.org/jgphpc/pug/issue/27/matrixmulcublas)
+* **PASS** 2015/05/21 ddt/5.0 [matrixMulCUBLAS](https://github.com/eth-cscs/parallel-debuggers/issues/51)
 
 #### Profiling
 * **????** ``perftools+cp2k`` [cp2k+cuda+gnu](https://bitbucket.org/jgphpc/pug/issue/24/cp2k). (Issue with hugepage ?)
