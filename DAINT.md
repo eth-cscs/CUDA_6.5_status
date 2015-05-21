@@ -42,7 +42,7 @@ There is no direct dependency between the visualization tools and CUDA. Only thr
 
 ### JG
 #### PE
-* **????** 2015/04/09 ``cuda/6.5`` [matrixMulCUBLAS](https://bitbucket.org/jgphpc/pug/issue/27/matrixmulcublas)
+* **PASS** 2015/05/21 ``cuda/6.5`` [matrixMulCUBLAS](https://bitbucket.org/jgphpc/pug/issue/27/matrixmulcublas)
 
 #### Debugging
 * **????** 2015/04/09 ddt/5.0 [matrixMulCUBLAS](https://bitbucket.org/jgphpc/pug/issue/27/matrixmulcublas)
