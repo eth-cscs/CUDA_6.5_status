@@ -6,9 +6,9 @@
 
 ### Applications
 * **????** (CG 20.04.2015) _Ramses_ with MPI and OpenACC support, without OpenMP (contact CG).
-* **????** _Specfem3D_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/specfem3d/globe/small_benchmark_run_to_test_very_simple_Earth`` (contact LM and Nina), last test on April 13th successful (jobid=4218).
-* **PASS** (TWR 12.5.2015) _Gromacs_ exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/gromacs/driver`` (contact LM).
-* **PASS** (TWR 12.5.2015) _CP2K_ MPI+OpenMP+cuda, version 2.6, exporting CRAY_CUDA_MPS=1. Source available at ``/scratch/santis/lucamar/cp2k/gpu`` (contact LM).
+* **PASS** _Specfem3D Globe_ MPI exporting CRAY_CUDA_MPS=1 (contact LM)
+* **PASS** _Gromacs_ MPI+OpenMP+cuda, version 5.0.4, exporting CRAY_CUDA_MPS=1 (contact LM) 
+* **PASS** _CP2K_ MPI+OpenMP+cuda, version 2.6, exporting CRAY_CUDA_MPS=1 (contact LM)
 * **????** _BigDFT_ crashes in dcopy when using OpenCL/cuda65. You may find a related ticket [#17793](https://webrt.cscs.ch/Ticket/Display.html?id=17793).
 
 ### Ticket-related tests
