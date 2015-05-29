@@ -32,7 +32,7 @@
 
 
 ### COSMO
-* **????** (LB 10.4.2015) Xavier successfully compiled and run COSMO tests using CCE and CUDA 6.5 ( see ticket [#18018](https://webrt.cscs.ch/Ticket/Display.html?id=18018) ).
+* **PASS** (BC 26.5.2015) No library issues so far.
 
 
 ### Visualization
